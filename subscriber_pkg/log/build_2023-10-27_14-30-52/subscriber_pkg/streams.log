@@ -1,0 +1,38 @@
+[0.636s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/subscriber_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/install.log --single-version-externally-managed
+[0.820s] running egg_info
+[0.820s] creating build/subscriber_pkg/subscriber_pkg.egg-info
+[0.820s] writing build/subscriber_pkg/subscriber_pkg.egg-info/PKG-INFO
+[0.820s] writing dependency_links to build/subscriber_pkg/subscriber_pkg.egg-info/dependency_links.txt
+[0.820s] writing entry points to build/subscriber_pkg/subscriber_pkg.egg-info/entry_points.txt
+[0.821s] writing requirements to build/subscriber_pkg/subscriber_pkg.egg-info/requires.txt
+[0.821s] writing top-level names to build/subscriber_pkg/subscriber_pkg.egg-info/top_level.txt
+[0.821s] writing manifest file 'build/subscriber_pkg/subscriber_pkg.egg-info/SOURCES.txt'
+[0.822s] reading manifest file 'build/subscriber_pkg/subscriber_pkg.egg-info/SOURCES.txt'
+[0.823s] writing manifest file 'build/subscriber_pkg/subscriber_pkg.egg-info/SOURCES.txt'
+[0.823s] running build
+[0.823s] running build_py
+[0.823s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build
+[0.823s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib
+[0.823s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib/subscriber_pkg
+[0.823s] copying subscriber_pkg/    simple_subscriber.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib/subscriber_pkg
+[0.823s] copying subscriber_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib/subscriber_pkg
+[0.823s] running install
+[0.823s] running install_lib
+[0.824s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg
+[0.824s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib/subscriber_pkg/    simple_subscriber.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg
+[0.824s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build/lib/subscriber_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg
+[0.824s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg/    simple_subscriber.py to     simple_subscriber.cpython-310.pyc
+[0.825s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg/__init__.py to __init__.cpython-310.pyc
+[0.825s] running install_data
+[0.825s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/ament_index
+[0.825s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/ament_index/resource_index
+[0.825s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/ament_index/resource_index/packages
+[0.826s] copying resource/subscriber_pkg -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/ament_index/resource_index/packages
+[0.826s] copying package.xml -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/subscriber_pkg
+[0.826s] copying launch/subscriber_pkg_launch_file.launch.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/share/subscriber_pkg
+[0.826s] running install_egg_info
+[0.827s] Copying build/subscriber_pkg/subscriber_pkg.egg-info to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages/subscriber_pkg-0.0.0-py3.10.egg-info
+[0.827s] running install_scripts
+[0.844s] Installing simple_subscriber script to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/subscriber_pkg
+[0.844s] writing list of installed files to '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/install.log'
+[0.875s] Invoked command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/install/subscriber_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/subscriber_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subscriber_pkg/build/subscriber_pkg/install.log --single-version-externally-managed
