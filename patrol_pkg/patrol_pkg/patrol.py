@@ -12,7 +12,7 @@ class  Patrol(Node):
     def __init__(self):
         # Here you have the class constructor
         # call the class constructor
-        super().__init__('lidar')
+        super().__init__('patrol')
         # create the publisher object
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         # create the subscriber object
