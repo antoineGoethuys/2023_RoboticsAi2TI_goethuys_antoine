@@ -1,0 +1,21 @@
+[2.967s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/publisher_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/publisher_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/install.log --single-version-externally-managed
+[3.228s] running egg_info
+[3.229s] writing ../build/publisher_pkg/publisher_pkg.egg-info/PKG-INFO
+[3.229s] writing dependency_links to ../build/publisher_pkg/publisher_pkg.egg-info/dependency_links.txt
+[3.229s] writing entry points to ../build/publisher_pkg/publisher_pkg.egg-info/entry_points.txt
+[3.229s] writing requirements to ../build/publisher_pkg/publisher_pkg.egg-info/requires.txt
+[3.230s] writing top-level names to ../build/publisher_pkg/publisher_pkg.egg-info/top_level.txt
+[3.232s] reading manifest file '../build/publisher_pkg/publisher_pkg.egg-info/SOURCES.txt'
+[3.233s] writing manifest file '../build/publisher_pkg/publisher_pkg.egg-info/SOURCES.txt'
+[3.233s] running build
+[3.233s] running build_py
+[3.233s] running install
+[3.233s] running install_lib
+[3.235s] running install_data
+[3.236s] running install_egg_info
+[3.238s] removing '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[3.238s] Copying ../build/publisher_pkg/publisher_pkg.egg-info to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg-0.0.0-py3.10.egg-info
+[3.239s] running install_scripts
+[3.261s] Installing simple_publisher script to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/publisher_pkg/lib/publisher_pkg
+[3.261s] writing list of installed files to '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/install.log'
+[3.457s] Invoked command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/publisher_pkg' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/publisher_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/publisher_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/publisher_pkg/install.log --single-version-externally-managed

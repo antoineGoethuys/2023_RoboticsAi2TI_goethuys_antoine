@@ -1,0 +1,31 @@
+[3.424s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/emergency_stop_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/emergency_stop_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/install.log --single-version-externally-managed
+[3.687s] running egg_info
+[3.688s] creating ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info
+[3.688s] writing ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/PKG-INFO
+[3.689s] writing dependency_links to ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/dependency_links.txt
+[3.689s] writing entry points to ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/entry_points.txt
+[3.689s] writing requirements to ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/requires.txt
+[3.689s] writing top-level names to ../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/top_level.txt
+[3.689s] writing manifest file '../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/SOURCES.txt'
+[3.691s] reading manifest file '../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/SOURCES.txt'
+[3.692s] writing manifest file '../build/emergency_stop_pkg/emergency_stop_pkg.egg-info/SOURCES.txt'
+[3.692s] running build
+[3.692s] running build_py
+[3.692s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build
+[3.692s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib
+[3.693s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib/emergency_stop_pkg
+[3.694s] copying emergency_stop_pkg/emergency_stop.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib/emergency_stop_pkg
+[3.694s] copying emergency_stop_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib/emergency_stop_pkg
+[3.694s] running install
+[3.695s] running install_lib
+[3.695s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages/emergency_stop_pkg
+[3.695s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib/emergency_stop_pkg/emergency_stop.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages/emergency_stop_pkg
+[3.695s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build/lib/emergency_stop_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages/emergency_stop_pkg
+[3.695s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages/emergency_stop_pkg/emergency_stop.py to emergency_stop.cpython-310.pyc
+[3.695s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages/emergency_stop_pkg/__init__.py to __init__.cpython-310.pyc
+[3.695s] running install_data
+[3.697s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/share/ament_index
+[3.697s] error: can't copy 'resource/emergency_stop_pkg': doesn't exist or not a regular file
+[3.697s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/share/ament_index/resource_index
+[3.697s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/share/ament_index/resource_index/packages
+[3.753s] Invoked command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/emergency_stop_pkg' returned '1': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/emergency_stop_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/emergency_stop_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/emergency_stop_pkg/install.log --single-version-externally-managed

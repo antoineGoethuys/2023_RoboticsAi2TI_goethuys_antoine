@@ -1,0 +1,37 @@
+[2.998s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subpub_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/subpub_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/install.log --single-version-externally-managed
+[3.263s] running egg_info
+[3.265s] creating ../build/subpub_pkg/subpub_pkg.egg-info
+[3.266s] writing ../build/subpub_pkg/subpub_pkg.egg-info/PKG-INFO
+[3.266s] writing dependency_links to ../build/subpub_pkg/subpub_pkg.egg-info/dependency_links.txt
+[3.266s] writing entry points to ../build/subpub_pkg/subpub_pkg.egg-info/entry_points.txt
+[3.266s] writing requirements to ../build/subpub_pkg/subpub_pkg.egg-info/requires.txt
+[3.266s] writing top-level names to ../build/subpub_pkg/subpub_pkg.egg-info/top_level.txt
+[3.266s] writing manifest file '../build/subpub_pkg/subpub_pkg.egg-info/SOURCES.txt'
+[3.268s] reading manifest file '../build/subpub_pkg/subpub_pkg.egg-info/SOURCES.txt'
+[3.268s] writing manifest file '../build/subpub_pkg/subpub_pkg.egg-info/SOURCES.txt'
+[3.269s] running build
+[3.269s] running build_py
+[3.270s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build
+[3.270s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib
+[3.270s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib/subpub_pkg
+[3.270s] copying subpub_pkg/subpub.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib/subpub_pkg
+[3.270s] copying subpub_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib/subpub_pkg
+[3.270s] running install
+[3.270s] running install_lib
+[3.270s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg
+[3.270s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib/subpub_pkg/subpub.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg
+[3.270s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build/lib/subpub_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg
+[3.271s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg/subpub.py to subpub.cpython-310.pyc
+[3.272s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg/__init__.py to __init__.cpython-310.pyc
+[3.272s] running install_data
+[3.273s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/ament_index
+[3.274s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/ament_index/resource_index
+[3.274s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/ament_index/resource_index/packages
+[3.274s] copying resource/subpub_pkg -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/ament_index/resource_index/packages
+[3.274s] copying package.xml -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/subpub_pkg
+[3.274s] copying launch/subpub_pkg_launch_file.launch.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/share/subpub_pkg
+[3.274s] running install_egg_info
+[3.275s] Copying ../build/subpub_pkg/subpub_pkg.egg-info to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg-0.0.0-py3.10.egg-info
+[3.276s] running install_scripts
+[3.304s] Installing subpub script to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/subpub_pkg
+[3.304s] writing list of installed files to '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/install.log'

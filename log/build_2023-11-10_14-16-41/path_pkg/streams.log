@@ -1,0 +1,37 @@
+[3.236s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/path_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/path_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/install.log --single-version-externally-managed
+[3.521s] running egg_info
+[3.522s] creating ../build/path_pkg/path_pkg.egg-info
+[3.522s] writing ../build/path_pkg/path_pkg.egg-info/PKG-INFO
+[3.523s] writing dependency_links to ../build/path_pkg/path_pkg.egg-info/dependency_links.txt
+[3.523s] writing entry points to ../build/path_pkg/path_pkg.egg-info/entry_points.txt
+[3.524s] writing requirements to ../build/path_pkg/path_pkg.egg-info/requires.txt
+[3.524s] writing top-level names to ../build/path_pkg/path_pkg.egg-info/top_level.txt
+[3.524s] writing manifest file '../build/path_pkg/path_pkg.egg-info/SOURCES.txt'
+[3.525s] reading manifest file '../build/path_pkg/path_pkg.egg-info/SOURCES.txt'
+[3.526s] writing manifest file '../build/path_pkg/path_pkg.egg-info/SOURCES.txt'
+[3.526s] running build
+[3.526s] running build_py
+[3.526s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build
+[3.526s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib
+[3.527s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib/path_pkg
+[3.527s] copying path_pkg/path.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib/path_pkg
+[3.527s] copying path_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib/path_pkg
+[3.527s] running install
+[3.527s] running install_lib
+[3.528s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg
+[3.528s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib/path_pkg/path.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg
+[3.528s] copying /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/build/lib/path_pkg/__init__.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg
+[3.528s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg/path.py to path.cpython-310.pyc
+[3.531s] byte-compiling /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg/__init__.py to __init__.cpython-310.pyc
+[3.531s] running install_data
+[3.532s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/ament_index
+[3.533s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/ament_index/resource_index
+[3.533s] creating /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/ament_index/resource_index/packages
+[3.533s] copying resource/path_pkg -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/ament_index/resource_index/packages
+[3.533s] copying package.xml -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/path_pkg
+[3.533s] copying launch/path_pkg_launch_file.launch.py -> /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/share/path_pkg
+[3.533s] running install_egg_info
+[3.534s] Copying ../build/path_pkg/path_pkg.egg-info to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/python3.10/site-packages/path_pkg-0.0.0-py3.10.egg-info
+[3.535s] running install_scripts
+[3.559s] Installing path script to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/path_pkg/lib/path_pkg
+[3.559s] writing list of installed files to '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/path_pkg/install.log'

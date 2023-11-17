@@ -1,0 +1,21 @@
+[2.883s] Invoking command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subpub_pkg': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/subpub_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/install.log --single-version-externally-managed
+[3.150s] running egg_info
+[3.151s] writing ../build/subpub_pkg/subpub_pkg.egg-info/PKG-INFO
+[3.151s] writing dependency_links to ../build/subpub_pkg/subpub_pkg.egg-info/dependency_links.txt
+[3.152s] writing entry points to ../build/subpub_pkg/subpub_pkg.egg-info/entry_points.txt
+[3.152s] writing requirements to ../build/subpub_pkg/subpub_pkg.egg-info/requires.txt
+[3.152s] writing top-level names to ../build/subpub_pkg/subpub_pkg.egg-info/top_level.txt
+[3.154s] reading manifest file '../build/subpub_pkg/subpub_pkg.egg-info/SOURCES.txt'
+[3.155s] writing manifest file '../build/subpub_pkg/subpub_pkg.egg-info/SOURCES.txt'
+[3.155s] running build
+[3.155s] running build_py
+[3.155s] running install
+[3.155s] running install_lib
+[3.157s] running install_data
+[3.158s] running install_egg_info
+[3.160s] removing '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[3.160s] Copying ../build/subpub_pkg/subpub_pkg.egg-info to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages/subpub_pkg-0.0.0-py3.10.egg-info
+[3.161s] running install_scripts
+[3.185s] Installing subpub script to /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/subpub_pkg
+[3.185s] writing list of installed files to '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/install.log'
+[3.426s] Invoked command in '/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/subpub_pkg' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/prefix_override:/home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/install/subpub_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/subpub_pkg build --build-base /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/build install --record /home/ubuntu/ros2_ws/src/2023_RoboticsAi2TI_goethuys_antoine/build/subpub_pkg/install.log --single-version-externally-managed

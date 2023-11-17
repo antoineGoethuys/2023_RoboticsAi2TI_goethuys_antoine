@@ -1,0 +1,3 @@
+[console_scripts]
+path = path_pkg.path:main
+
