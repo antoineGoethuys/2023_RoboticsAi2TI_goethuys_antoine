@@ -19,8 +19,8 @@ class Avoid_obstacle(Node):
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         # create the subscriber object
         self.subscriber = self.create_subscription(LaserScan, '/scan', self.laser_callback, QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT))
-        # define the timer period for 0.5 seconds
-        self.timer_period = 0.5
+        # define the timer period for 1 seconds
+        self.timer_period = 1
         # define the variable to save the received info
         self.laser_forward = 0
         self.laser_right = 0
@@ -34,6 +34,7 @@ class Avoid_obstacle(Node):
         self.laser_forward = msg.ranges[-1]
         self.laser_right = msg.ranges[15]
         self.laser_left = msg.ranges[-15]
+        self.get_logger().info(f'{len(msg.ranges)}')
         
         
     def motion(self):
@@ -45,7 +46,7 @@ class Avoid_obstacle(Node):
             self.cmd.angular.z = 0.0
             self.get_logger().info('go straight')
             
-        elif 2 > self.laser_forward >= 0.2:
+        elif 2 > self.laser_forward >= 0.3:
             self.cmd.linear.x = 0.05
             self.cmd.angular.z = 0.0
             self.get_logger().info('go straight low speed')
