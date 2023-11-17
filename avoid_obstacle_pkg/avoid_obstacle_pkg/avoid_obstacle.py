@@ -7,7 +7,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import ReliabilityPolicy, QoSProfile
 # import the degreemath module from math library
-from math import degrees, radians
+from math import degrees, radians, pi
 
 class Avoid_obstacle(Node):
 
@@ -41,21 +41,25 @@ class Avoid_obstacle(Node):
         # self.get_logger().info('I receive: "%s"' % str(self.laser_forward))
         # Logic of move
         if self.laser_forward > 2:
-            self.cmd.linear.x = 0.2
-            self.cmd.angular.z = 0.0
-            self.get_logger().info('go straight')
-        elif 2 > self.laser_forward >= 0.2:
             self.cmd.linear.x = 0.1
             self.cmd.angular.z = 0.0
+            self.get_logger().info('go straight')
+            
+        elif 2 > self.laser_forward >= 0.2:
+            self.cmd.linear.x = 0.05
+            self.cmd.angular.z = 0.0
             self.get_logger().info('go straight low speed')
+
         else:
+
             if self.laser_right > self.laser_left:
                 self.cmd.linear.x = 0.0
-                self.cmd.angular.z = radians(-90)
+                self.cmd.angular.z = -pi/2
                 self.get_logger().info('turn right')
+
             elif self.laser_right < self.laser_left:
                 self.cmd.linear.x = 0.0
-                self.cmd.angular.z = radians(90)
+                self.cmd.angular.z = pi/2
                 self.get_logger().info('turn left')
             
             
