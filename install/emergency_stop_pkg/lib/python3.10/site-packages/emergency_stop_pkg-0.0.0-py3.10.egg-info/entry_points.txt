@@ -1,3 +1,0 @@
-[console_scripts]
-emergency_stop = emergency_stop_pkg.emergency_stop:main
-

@@ -1,3 +1,0 @@
-[console_scripts]
-patrol = patrol_pkg.patrol:main
-

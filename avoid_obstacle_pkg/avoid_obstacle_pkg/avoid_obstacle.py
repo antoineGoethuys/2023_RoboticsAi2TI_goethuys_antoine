@@ -55,7 +55,8 @@ class Avoid_obstacle(Node):
 
             if self.laser_right > self.laser_left:
                 self.cmd.linear.x = 0.0
-                self.cmd.angular.z = -pi/2
+                # self.cmd.angular.z = -pi/2
+                self.cmd.angular.z = radians(-90)
                 self.get_logger().info('turn right')
 
             elif self.laser_right < self.laser_left:
