@@ -6,7 +6,6 @@ from rclpy.qos import ReliabilityPolicy, QoSProfile
 import matplotlib.pyplot as plt
 import numpy as np
 import math, time
-from scipy import signal
 
 class AutoPark(Node):
 
@@ -233,39 +232,40 @@ class AutoPark(Node):
 
 
     def move(self):
-        # turn right in block
-        if self.isControlled == False:
-            if self.laser_right > 0.5:
-                self.isControlled = True
-                self.start_turn_time = time.time()  # Start the timer when the robot starts turning
-                self.turn(-90)
-                self.log(f'turn right in block')
-                return
-            else:
-                self.isControlled = False
-                self.forward(0.5)
-                self.log(f'forward in block')
-                return
-        else:
-            # Stop turning after 5 seconds
-            if time.time() - self.start_turn_time > 5:
-                self.isControlled = False
-                self.stop()
-                self.log(f'stop turning')
+        # if self.laser_right > 0.5:
+        #         self.turn(-90)
+        #         self.log("turning right")
+        #     # else don't turn
+        # else:
+        #     # Move the robot forward 2 meters at a speed of 1 meter per second
+        #     self.forward(1.0, 2.0)
+        #     self.log("moving forward")
+        self.forward(1.0, 2.0)
 
-            
 
     def log(self, message: str):
         self.get_logger().info(message)
 
-    def forward(self, speed: float):
+    def forward(self, speed: float, distance: float):
         self.cmd.linear.x = speed
         self.cmd.angular.z = 0.0
+
+        # Calculate time to move
+        time_to_move = distance / speed
+
+        # Wait for the move to complete
+        time.sleep(time_to_move)
+
+        # Stop moving
+        self.stop()
 
     def turn(self, degrees: float):
         self.cmd.linear.x = 0.0
         self.cmd.angular.z = math.radians(degrees)
-    
+        time_to_turn = abs(degrees / self.cmd.angular.z)  # Calculate time to turn
+        time.sleep(abs(time_to_turn))  # Wait for the turn to complete
+        self.cmd.angular.z = 0.0  # Stop turning
+
     def stop(self):
         self.cmd.linear.x = 0.0
         self.cmd.angular.z = 0.0
