@@ -30,13 +30,12 @@ class AutoPark(Node):
         # laser array
         self.laser_array = np.array([])
         # parking space
-        self.width = 0
-        self.depth = 0
-        self.shortest_corner = 0
-        self.isNotParked:bool = True
-        self.isControlled:bool = False    
-        # graph
-        self.lines = []   
+        self.parkingFound:bool = False
+        self.timeStarted:bool = False
+        self.parkingSpaceEnd:bool = False
+        self.startTime = 0
+        self.endTime = 0
+        self.distance = 0.0
     
         # mathplotlib
         # Create initial polar scatter plot
@@ -60,7 +59,6 @@ class AutoPark(Node):
         self.scatter_right = None
         self.scatter_back = None
         self.scatter_left = None
-        self.scatter_corners = None
 
         self.cmd = Twist()
 
@@ -81,90 +79,16 @@ class AutoPark(Node):
     
     def motion(self):
         self.graph()
-        self.calculate_parking_dimensions()
         self.move()
             
         # Publishing the cmd_vel values to a Topic
         self.publisher_.publish(self.cmd)
-    
-    def find_edges(self):
-        alpha = 360//len(self.laser_array)
-        tolerance = 0.05
-        upper_tolerance = 0.5
-        corner_array = [[],[]]
-        corners = {}
-        corners_type = {}
-        # print("="*30)
-
-        for i, l in enumerate(self.laser_array):
-            l1 = self.laser_array[i-4]
-            a1 = alpha*(i-4)
-
-            l2 = self.laser_array[i-3]
-            a2 = alpha*(i-3)
-
-            l3 = self.laser_array[i-2]
-            a3 = alpha*(i-2)
-
-            l4 = self.laser_array[(i-1)]
-            a4 = alpha*(i-1)
-
-            l5 = self.laser_array[(i)]
-            a5 = alpha*(i)
-
-            # Check if the values are finite before performing subtraction
-            if np.isfinite(l1) and np.isfinite(l2) and np.isfinite(l3) and np.isfinite(l4) and np.isfinite(l5):
-                if ((l1 - l2) < tolerance/l3) and ((l2 - l3) < tolerance/l3) and ((l3 - l4) > tolerance/l3) and ((l4 - l5) > tolerance/l3):
-                    corners[a3] = l3
-                    corners_type[a3] = "90"
-                
-                if ((l1 - l2) > tolerance/l3) and ((l2 - l3) > tolerance/l3) and ((l3 - l4) < tolerance/l3) and ((l4 - l5) < tolerance/l3):
-                    corners[a3] = l3
-                    corners_type[a3] = "270"
-
-                if ((l1 - l2) < tolerance/l3) and (l2 - l3) > (upper_tolerance) and ((l3 - l4) < tolerance/l3) and ((l4 - l5) < tolerance/l3):
-                    corners[a3] = l3
-                    corners_type[a3] = "90s"
-        return corners, corners_type
     
     def cleangraph(self):
         for collection in self.ax.collections:
             collection.remove()
         for collection in self.ax2.collections:
             collection.remove()
-        for line in self.lines:
-            line.remove()
-        self.lines = []
-    
-    def calculate_parking_dimensions(self):
-        corners, _ = self.find_edges()
-        if len(corners) < 3:
-            # self.log("Not enough corners found to calculate parking dimensions.")
-            return
-
-        # Sort corners by angle
-        sorted_corners = sorted(zip(corners.keys(), corners.values()))
-
-        # Calculate differences between consecutive angles
-        angle_diffs = [(sorted_corners[i+1][0] - sorted_corners[i][0], i) for i in range(len(sorted_corners)-1)]
-        angle_diffs.append((360 + sorted_corners[0][0] - sorted_corners[-1][0], len(sorted_corners)-1))  # Wrap around
-
-        # Sort by angle difference
-        angle_diffs.sort(key=lambda x: x[0])
-
-        # The smallest difference corresponds to width, the largest to depth
-        width_index = angle_diffs[0][1]
-        depth_index = angle_diffs[-1][1]
-
-        # Calculate width and depth
-        self.width = abs(sorted_corners[width_index][1] - sorted_corners[(width_index+1)%len(sorted_corners)][1])
-        self.depth = abs(sorted_corners[depth_index][1] - sorted_corners[(depth_index+1)%len(sorted_corners)][1])
-
-        # Calculate shortest corner
-        self.shortest_corner = min(corners.values())
-
-        # self.log(f"Calculated parking dimensions: Width = {self.width}, Depth = {self.depth}, Shortest Corner = {self.shortest_corner}")
-        self.log(f"parking dimensions are good")
 
     def sidegraph(self):
         # Highlight the front, right, left, and back sides
@@ -179,42 +103,14 @@ class AutoPark(Node):
         self.scatter2_back = self.ax2.scatter(180, self.laser_back, c='m', s=50)
         self.scatter2_left = self.ax2.scatter(90, self.laser_left, c='m', s=50)
 
-    def connect_corners(self, corners):
-        if corners:  # Check if corners is not empty
-            # Sort corners by angle and plot lines
-            sorted_corners = sorted(zip(corners.keys(), corners.values()))
-            sorted_angles, sorted_distances = zip(*sorted_corners)
-            
-            # Append the first corner to the end to connect all corners
-            sorted_angles = list(sorted_angles) + [sorted_angles[0]]
-            sorted_distances = list(sorted_distances) + [sorted_distances[0]]
-            
-            line1, = self.ax.plot(np.radians(sorted_angles), sorted_distances, 'r-')
-            line2, = self.ax2.plot(sorted_angles, sorted_distances, 'r-')
-            self.lines.append(line1)
-            self.lines.append(line2)
-
     def graph(self):
         # Update scatter plot data
         theta = np.linspace(0, 2*np.pi, len(self.laser_array), endpoint=False)
         self.cleangraph()
-        corners, corners_type = self.find_edges()
-        # print(corners)
-
-        # Add corners to the graphs
-        corner_angles = list(corners.keys())
-        corner_distances = list(corners.values())
-        corner_types = list(corners_type.values())
-
-        # Define colors for each type of corner
-        corner_colors = ['r' if corner_type == '90' else 'yellow' if corner_type == '90s' else'g' for corner_type in corner_types]
-
-        self.scatter_corners = self.ax.scatter(np.radians(corner_angles), corner_distances, c=corner_colors, s=50)
-        self.scatter2_corners = self.ax2.scatter(corner_angles, corner_distances, c=corner_colors, s=50)
 
         # Plot the lidar array
         self.scatter = self.ax.scatter(theta, self.laser_array, c='b', s=1)
-        self.scatter2 = self.ax2.scatter(range(0,360), self.laser_array, c='b', s=1)
+        self.scatter2 = self.ax2.scatter(range(len(self.laser_array)), self.laser_array, c='b', s=1)
 
         # Filter out NaN and Inf values
         laser_array_filtered = self.laser_array[np.isfinite(self.laser_array)]
@@ -223,8 +119,6 @@ class AutoPark(Node):
         self.ax.set_rmax(max(laser_array_filtered) + 2 if laser_array_filtered.size > 0 else 2)
         self.ax2.set_ylim(0, max(laser_array_filtered) + 2 if laser_array_filtered.size > 0 else 2)
 
-        # Connect corners with lines
-        self.connect_corners(corners)
         self.sidegraph()
 
         plt.draw()
@@ -232,16 +126,43 @@ class AutoPark(Node):
 
 
     def move(self):
-        # if self.laser_right > 0.5:
-        #         self.turn(-90)
-        #         self.log("turning right")
-        #     # else don't turn
-        # else:
-        #     # Move the robot forward 2 meters at a speed of 1 meter per second
-        #     self.forward(1.0, 2.0)
-        #     self.log("moving forward")
-        self.forward(1.0, 2.0)
+        print(self.laser_right, self.parkingFound)
+        if not self.parkingFound:
+            self.log("Searching for parking space...")
+            self.cmd.linear.x = 0.2
+        if 0.6 < self.laser_right < 1.5 and not self.parkingSpaceEnd:
+            self.stop()
+            self.log("Found parking space!")
+            self.parkingFound = True
+            if not self.timeStarted:
+                self.startTime = time.time()
+                self.timeStarted = True
+            self.cmd.linear.x = 0.2
+        elif self.timeStarted:
+            self.stop()
+            self.log("end of parking space")
+            self.parkingFound = True
+            if not self.parkingSpaceEnd:
+                self.endTime = time.time()
+                self.parkingSpaceEnd = True
+                self.parkingManeuver((self.endTime - self.startTime))
+    
+    def parkingManeuver(self, timer: float):
+        self.distance = float(self.laser_right)
+        timed = self.distance / 0.15
 
+        self.backward(0.2, timer*0.75)
+        self.turn(90)
+        self.backward(0.2, timed)
+
+
+    def backward(self, speed: float, timer: float):
+        self.cmd.linear.x = -speed
+        self.cmd.angular.z = 0.0
+        self.log(f"backwards for {timer} seconds {speed}")
+        self.publisher_.publish(self.cmd)
+        time.sleep(timer)
+        self.stop()
 
     def log(self, message: str):
         self.get_logger().info(message)
@@ -249,22 +170,21 @@ class AutoPark(Node):
     def forward(self, speed: float, distance: float):
         self.cmd.linear.x = speed
         self.cmd.angular.z = 0.0
-
-        # Calculate time to move
-        time_to_move = distance / speed
-
-        # Wait for the move to complete
+        time_to_move = abs(distance / speed)
+        self.log(f"1 forward for {time_to_move} seconds {speed}")
+        self.publisher_.publish(self.cmd)
         time.sleep(time_to_move)
-
-        # Stop moving
         self.stop()
 
     def turn(self, degrees: float):
-        self.cmd.linear.x = 0.0
-        self.cmd.angular.z = math.radians(degrees)
-        time_to_turn = abs(degrees / self.cmd.angular.z)  # Calculate time to turn
-        time.sleep(abs(time_to_turn))  # Wait for the turn to complete
-        self.cmd.angular.z = 0.0  # Stop turning
+        speed = 0.5  # Define your turning speed here
+        radians = math.radians(degrees)  # Convert degrees to radians
+        self.cmd.angular.z = speed if radians > 0 else -speed
+        time_to_turn = abs(radians / speed)
+        self.log(f"Turning for {time_to_turn} seconds at speed {speed}")
+        self.publisher_.publish(self.cmd)
+        time.sleep(time_to_turn)
+        self.stop()
 
     def stop(self):
         self.cmd.linear.x = 0.0

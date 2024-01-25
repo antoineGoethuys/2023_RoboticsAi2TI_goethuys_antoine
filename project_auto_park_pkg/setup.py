@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'avoid_obstacle_pkg'
+package_name = 'project_auto_park_pkg'
 
 setup(
     name=package_name,
